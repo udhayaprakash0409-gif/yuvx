@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Outstation | Plan Your Journey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="outstation.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+    <header class="os-hero">
+        <div class="container hero-content">
+            <div class="hero-type">
+                <p style="color: var(--primary); letter-spacing: 2px; margin-bottom: 10px;">PREMIUM DRIVER SERVICE</p>
+                <h1>Outstation Gateways</h1>
+                <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 30px;">
+                    Experience the freedom of the open road without the stress of driving.
+                    Our verified professionals ensure a safe and smooth journey for you and your family.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Calculator Section -->
+    <section class="calculator-section">
+        <div class="calc-card">
+            <div class="calc-inputs">
+                <h2>Estimate Your Fair</h2>
+
+                <div class="range-group">
+                    <div class="range-header">
+                        <span>Duration</span>
+                        <span id="daysValue">2 Days</span>
+                    </div>
+                    <input type="range" id="daysRange" min="1" max="15" value="2">
+                </div>
+
+                <div class="range-group">
+                    <div class="range-header">
+                        <span>One-Way Distance</span>
+                        <span id="kmValue">300 km</span>
+                    </div>
+                    <input type="range" id="kmRange" min="50" max="1000" step="50" value="300">
+                </div>
+
+                <div class="options-group">
+                    <label class="custom-check">
+                        <input type="checkbox" id="returnTrip" checked>
+                        <span class="checkmark"><i data-lucide="check"></i></span>
+                        Round Trip
+                    </label>
+                </div>
+            </div>
+
+            <div class="calc-result">
+                <div class="price-display">
+                    <h3>Estimated Driver Cost</h3>
+                    <div class="big-price" id="totalPrice">₹0</div>
+                    <p class="price-note">*Includes Driver Allowance & Commission. Fuel & Tolls extra.</p>
+                    <button class="btn-primary full-width" id="bookBtn">Book Reference</button>
+                    <div style="margin-top: 20px; text-align: center;">
+                        <a href="../index.html" style="color: var(--text-muted); font-size: 0.9rem;">Back to Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Wizard -->
+    <section id="bookingForm" class="wizard-section">
+        <div class="container">
+            <div class="form-wizard">
+                <div class="step-indicators">
+                    <div class="step-dot active">1</div>
+                    <div class="step-dot">2</div>
+                    <div class="step-dot">3</div>
+                </div>
+
+                <form>
+                    <!-- Step 1: Trip Details -->
+                    <div class="form-step active" id="step1">
+                        <h3 style="color: var(--white); margin-bottom: 20px;">Trip Details</h3>
+                        <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                            <div class="form-group">
+                                <label style="display: block; color: var(--text-muted); margin-bottom: 5px;">Pickup
+                                    Location</label>
+                                <input type="text" placeholder="Enter City/Area"
+                                    style="width: 100%; padding: 12px; background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.1); color: #fff; border-radius: 6px;">
+                            </div>
+                            <div class="form-group">
+                                <label style="display: block; color: var(--text-muted); margin-bottom: 5px;">Drop
+                                    Location</label>
+                                <input type="text" placeholder="Enter Destination"
+                                    style="width: 100%; padding: 12px; background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.1); color: #fff; border-radius: 6px;">
+                            </div>
+                        </div>
+                        <div class="step-actions">
+                            <div></div> <!-- Spacer -->
+                            <button type="button" class="btn-primary btn-next">Next Step</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Personal Info -->
+                    <div class="form-step" id="step2">
+                        <h3 style="color: var(--white); margin-bottom: 20px;">Contact Info</h3>
+                        <div class="form-group" style="margin-bottom: 15px;">
+                            <label style="display: block; color: var(--text-muted); margin-bottom: 5px;">Full
+                                Name</label>
+                            <input type="text" placeholder="Your Name"
+                                style="width: 100%; padding: 12px; background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.1); color: #fff; border-radius: 6px;">
+                        </div>
+                        <div class="form-group">
+                            <label style="display: block; color: var(--text-muted); margin-bottom: 5px;">Phone
+                                Number</label>
+                            <input type="tel" placeholder="+91 98765 43210"
+                                style="width: 100%; padding: 12px; background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.1); color: #fff; border-radius: 6px;">
+                        </div>
+                        <div class="step-actions">
+                            <button type="button" class="btn-secondary btn-prev">Back</button>
+                            <button type="button" class="btn-primary btn-next">Next Step</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Success -->
+                    <div class="form-step" id="step3">
+                        <div style="text-align: center; padding: 40px 0;">
+                            <div
+                                style="width: 60px; height: 60px; background: rgba(0,255,127,0.1); color: #00ff7f; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                                <i data-lucide="check" style="width: 30px; height: 30px;"></i>
+                            </div>
+                            <h3 style="color: var(--white); margin-bottom: 10px;">Request Received!</h3>
+                            <p style="color: var(--text-muted);">We will call you shortly to confirm your driver.</p>
+                        </div>
+                        <div class="step-actions">
+                            <button type="button" class="btn-secondary btn-prev">Edit</button>
+                            <button type="submit" class="btn-primary">Confirm Booking</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="outstation.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>

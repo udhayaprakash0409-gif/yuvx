@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local City Drivers - Admin Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="backend.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="brand">
+            <i data-lucide="shield-check"></i>
+            Elite<span>Admin</span>
+        </div>
+        <nav class="nav-menu">
+            <a href="#" class="nav-item active">
+                <i data-lucide="layout-dashboard"></i>
+                Dashboard
+            </a>
+            <a href="#" class="nav-item">
+                <i data-lucide="users"></i>
+                Drivers
+            </a>
+            <a href="#" class="nav-item">
+                <i data-lucide="calendar"></i>
+                Bookings
+            </a>
+            <a href="#" class="nav-item">
+                <i data-lucide="map-pin"></i>
+                Live Map
+            </a>
+            <a href="#" class="nav-item">
+                <i data-lucide="bar-chart-2"></i>
+                Reports
+            </a>
+            <a href="#" class="nav-item" style="margin-top: auto;">
+                <i data-lucide="settings"></i>
+                Settings
+            </a>
+            <a href="../../index.html" class="nav-item">
+                <i data-lucide="log-out"></i>
+                Logout
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="header">
+            <div class="page-title">
+                <h1>Local City Drivers</h1>
+                <div class="breadcrumbs">Dashboard / Drivers / Local</div>
+            </div>
+            <div class="user-profile">
+                <button class="action-btn"><i data-lucide="bell"></i></button>
+                <div class="avatar">
+                    <i data-lucide="user"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- Stats Grid -->
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-info">
+                    <h3>Total Drivers</h3>
+                    <div class="value">24</div>
+                </div>
+                <div class="stat-icon">
+                    <i data-lucide="users"></i>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-info">
+                    <h3>Active Trips</h3>
+                    <div class="value">8</div>
+                </div>
+                <div class="stat-icon">
+                    <i data-lucide="car"></i>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-info">
+                    <h3>Available Now</h3>
+                    <div class="value">12</div>
+                </div>
+                <div class="stat-icon">
+                    <i data-lucide="check-circle"></i>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-info">
+                    <h3>Today's Revenue</h3>
+                    <div class="value">₹12.5k</div>
+                </div>
+                <div class="stat-icon">
+                    <i data-lucide="indian-rupee"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Drivers List -->
+        <section class="content-section">
+            <div class="section-header">
+                <h2>Active Local Drivers</h2>
+                <button class="btn-add">
+                    <i data-lucide="plus"></i>
+                    Add New Driver
+                </button>
+            </div>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Driver Name</th>
+                            <th>ID</th>
+                            <th>Status</th>
+                            <th>Current Location</th>
+                            <th>Rating</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="driver-info">
+                                    <div class="driver-avatar">R</div>
+                                    <span>Ramesh Kumar</span>
+                                </div>
+                            </td>
+                            <td>#DRV-001</td>
+                            <td><span class="status-badge status-active">Available</span></td>
+                            <td>Anna Nagar, Chennai</td>
+                            <td>4.8 ⭐</td>
+                            <td>
+                                <button class="action-btn"><i data-lucide="more-vertical"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="driver-info">
+                                    <div class="driver-avatar">S</div>
+                                    <span>Suresh Raj</span>
+                                </div>
+                            </td>
+                            <td>#DRV-004</td>
+                            <td><span class="status-badge status-busy">On Trip</span></td>
+                            <td>T. Nagar, Chennai</td>
+                            <td>4.9 ⭐</td>
+                            <td>
+                                <button class="action-btn"><i data-lucide="more-vertical"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="driver-info">
+                                    <div class="driver-avatar">K</div>
+                                    <span>Karthik M</span>
+                                </div>
+                            </td>
+                            <td>#DRV-012</td>
+                            <td><span class="status-badge status-active">Available</span></td>
+                            <td>Velachery, Chennai</td>
+                            <td>4.7 ⭐</td>
+                            <td>
+                                <button class="action-btn"><i data-lucide="more-vertical"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="driver-info">
+                                    <div class="driver-avatar">V</div>
+                                    <span>Vikram Singh</span>
+                                </div>
+                            </td>
+                            <td>#DRV-008</td>
+                            <td><span class="status-badge status-offline">Offline</span></td>
+                            <td>-</td>
+                            <td>4.5 ⭐</td>
+                            <td>
+                                <button class="action-btn"><i data-lucide="more-vertical"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="driver-info">
+                                    <div class="driver-avatar">A</div>
+                                    <span>Arun Vijay</span>
+                                </div>
+                            </td>
+                            <td>#DRV-023</td>
+                            <td><span class="status-badge status-busy">On Trip</span></td>
+                            <td>Adyar, Chennai</td>
+                            <td>5.0 ⭐</td>
+                            <td>
+                                <button class="action-btn"><i data-lucide="more-vertical"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
